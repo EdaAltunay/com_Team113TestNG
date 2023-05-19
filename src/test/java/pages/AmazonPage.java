@@ -34,8 +34,3 @@ public class AmazonPage {
 
 }
 
-
-
-    git branch -M main
-        git remote add origin https://github.com/EdaAltunay/com_Team113TestNG.git
-        git push -u origin main
