@@ -11,7 +11,9 @@ public class C02_qualitydemyLoginTest {
     public void test01(){
         // QUALITYDEMY ANA SAYFAYA GIDIN
         Driver.getDriver().get("https://www.qualitydemy.com");
+
         QualitydemyPage qualitydemyPage = new QualitydemyPage();
+
         // login linkine tiklayin
         qualitydemyPage.ilkLoginLinki.click();
         // gecerli username ve sifre yi ilgili kutulara yazin
@@ -19,7 +21,7 @@ public class C02_qualitydemyLoginTest {
         qualitydemyPage.passwordKutusu.sendKeys("Nevzat152032");
 
         // login butonuna basin
-        qualitydemyPage.loginButonu.click();
+        qualitydemyPage.loginButonu.submit();
 
         // basarili olarak giris yapildigini test edin
         Assert.assertTrue(qualitydemyPage.basariliGirisKontrolElementi.isDisplayed());

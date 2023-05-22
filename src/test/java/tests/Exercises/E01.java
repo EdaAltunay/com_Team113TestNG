@@ -1,4 +1,4 @@
-package tests.day15_POM;
+package tests.Exercises;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,30 +6,27 @@ import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C05_QualitydemyLoginTesti {
+public class E01 {
+
 
     @Test
-    public void test01(){
-        // QUALITYDEMY ANA SAYFAYA GIDIN
-        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+    public void test(){
+        QualitydemyPage qualitydemyPage=new QualitydemyPage();
 
-        // login linkine tiklayin
-        QualitydemyPage qualitydemyPage= new QualitydemyPage();
+    // QUALITYDEMY ANA SAYFAYA GIDIN
+
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+    // login linkine tiklayin
         qualitydemyPage.ilkLoginLinki.click();
 
-        // gecerli username ve sifre yi ilgili kutulara yazin
+    // gecerli username ve sifre yi ilgili kutulara yazin
         qualitydemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
-
-        // login butonuna basin
+    // login butonuna basin
         qualitydemyPage.loginButonu.submit();
-
-
-        // basarili olarak giris yapildigini test edin
-
+    // basarili olarak giris yapildigini test edin
         Assert.assertTrue(qualitydemyPage.basariliGirisKontrolElementi.isDisplayed());
-        // sayfayi kapatin
+    // sayfayi kapatin
         Driver.closeDriver();
-    }
 
-}
+}}

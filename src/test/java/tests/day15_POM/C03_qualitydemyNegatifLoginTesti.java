@@ -25,14 +25,14 @@ public class C03_qualitydemyNegatifLoginTesti {
         qualitydemyPage.passwordKutusu.sendKeys("heyecandir");
         // login butonuna tiklayin
 
-        qualitydemyPage.loginButonu.click();
+        qualitydemyPage.loginButonu.submit();
         // giris yapilamadigini test edin
 
         Assert.assertTrue(qualitydemyPage.emailKutusu.isEnabled());
 
 
         // sayfayi kapatin
-        // Driver.closeDriver();
+         Driver.closeDriver();
     }
 
 }
