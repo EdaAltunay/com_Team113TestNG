@@ -16,6 +16,7 @@ public class C02_qualitydemyLoginTest {
 
         // login linkine tiklayin
         qualitydemyPage.ilkLoginLinki.click();
+
         // gecerli username ve sifre yi ilgili kutulara yazin
         qualitydemyPage.emailKutusu.sendKeys("anevzatcelik@gmail.com");
         qualitydemyPage.passwordKutusu.sendKeys("Nevzat152032");

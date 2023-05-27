@@ -10,7 +10,6 @@ public class C03_qualitydemyNegatifLoginTesti {
     public void test01(){
 
         // qualitydemy anasayfaya gidin
-
         Driver.getDriver().get("https://www.qualitydemy.com");
 
         // ilk login linkine tiklayin
@@ -21,13 +20,12 @@ public class C03_qualitydemyNegatifLoginTesti {
         qualitydemyPage.emailKutusu.sendKeys("selenium");
 
         // password olarak heyecandir yazin
-
         qualitydemyPage.passwordKutusu.sendKeys("heyecandir");
+
         // login butonuna tiklayin
-
         qualitydemyPage.loginButonu.submit();
-        // giris yapilamadigini test edin
 
+        // giris yapilamadigini test edin
         Assert.assertTrue(qualitydemyPage.emailKutusu.isEnabled());
 
 
