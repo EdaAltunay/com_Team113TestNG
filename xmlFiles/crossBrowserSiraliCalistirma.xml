@@ -51,8 +51,8 @@
 
     </test>
 
-    <test name="safari test">
-        <parameter name="browser" value="safari"></parameter>
+    <test name="edge test">
+        <parameter name="browser" value="edge"></parameter>
         <classes>
 
             <class name="tests.day19_crossBrowserTesting.C01_AmazonSearch"></class>
